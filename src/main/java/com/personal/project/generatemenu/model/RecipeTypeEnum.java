@@ -7,7 +7,12 @@ public enum RecipeTypeEnum {
     SIDE_DISH("Side Dish"),
     APPETIZER("Appetizer"),
     SOUP("Soup"),
-    SALAD("Salad");
+    SALAD("Salad"),
+    BREAKFAST("Breakfast"),
+    PASTA("Pasta"),
+    SANDWICH("Sandwich"),
+    JUICE("Juice"),
+    SMOOTHIE("Smoothie");
 
     public String type;
 
