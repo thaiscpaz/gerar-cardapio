@@ -17,9 +17,15 @@ public class IngredientController {
     @Autowired
     private IngredientService ingredientService;
 
-    @GetMapping
+  /*  @GetMapping
     public ResponseEntity<List<Ingredient>> getAll() throws Exception {
         List<Ingredient> ingredients = ingredientService.findAll();
+        return ResponseEntity.ok(ingredients);
+    }*/
+
+    @GetMapping
+    public ResponseEntity<List<Ingredient>> get(@RequestParam(value = "searchFor", required = true) String searchFor) throws Exception {
+        List<Ingredient> ingredients = ingredientService.findAllByName(searchFor);
         return ResponseEntity.ok(ingredients);
     }
 

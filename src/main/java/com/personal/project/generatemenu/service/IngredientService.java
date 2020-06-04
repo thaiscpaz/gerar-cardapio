@@ -24,4 +24,8 @@ public class IngredientService {
     public Ingredient save(Ingredient ingredient){
         return ingredientRepository.save(ingredient);
     }
+
+    public List<Ingredient> findAllByName(String searchFor) {
+        return ingredientRepository.findAllByName(searchFor);
+    }
 }
