@@ -1,18 +1,33 @@
 import React from 'react';
 import './App.css'
 import { BrowserRouter as Router } from 'react-router-dom';
-import AppRouter from './routes/AppRouter'
-import Navbar from './components/Navbar'
+import { makeStyles } from '@material-ui/core/styles';
+import Container from'@material-ui/core/Container';
+import AppRouter from './routes/AppRouter';
+import Header from './components/Header';
+import Footer from './components/Footer';
+
+const useStyles = makeStyles((theme) => ({
+  main: {
+    flex: 1,
+    maxWidth: "100%",
+    paddingLeft: 0,
+    paddingRight: 0,
+  }
+}));
 
 function App() {
 
+  const classes = useStyles();
+
   return (
-    <div className="app">
+    <Container className={classes.main}>
+      <Header />
       <Router>
-        <Navbar />
         <AppRouter />
       </Router>
-    </div>
+      <Footer />
+    </Container>
   );
 }
 
