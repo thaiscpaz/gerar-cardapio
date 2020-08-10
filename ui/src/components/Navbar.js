@@ -26,8 +26,12 @@ function Navbar() {
 
     let history = useHistory();
 
-    function handleClick() {
+    function login() {
         history.push("/login");
+    }
+
+    function generateMenu() {
+        history.push("/generatemenu");
     }
 
     return (
@@ -41,7 +45,13 @@ function Navbar() {
 
                     <Button
                         color="inherit"
-                        onClick={handleClick}>
+                        onClick={generateMenu}>
+                        Criar Menu
+                    </Button>
+
+                    <Button
+                        color="inherit"
+                        onClick={login}>
                         Login
                     </Button>
 
